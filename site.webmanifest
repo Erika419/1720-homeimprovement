@@ -1,15 +1,15 @@
 {
-  "name": "National Park",
-  "short_name": "National Park",
+  "name": "Home Improvement",
+  "short_name": "Home",
   "icons": [
     {
-      "src": "/https://erika419.github.io/1720-NationalParks/web-app-manifest-192x192.png",
+      "src": "/1720-homeimprovement/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/https://erika419.github.io/1720-NationalParks/web-app-manifest-512x512.png",
+      "src": "/1720-homeimprovement/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
