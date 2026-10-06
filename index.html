@@ -37,8 +37,7 @@
      <script src="scripts/scripts.js" defer> </script>
      <script src="scripts/dark.js" defer> </script>
      <script src="scripts/parks.js" type="module"> </script>
-
-
+     <script src="scripts/paint.js" defer> </script>
     
 </head>
 <body>
@@ -72,7 +71,14 @@
 
                 <main>
                 <h1 id=mug>National Parks</h1>
-                <div id="allparks" class="allparks"></div>
+                <label>Paint Quality
+                    <select id="quality">
+                        <option value="none" disabled selected>Select an option</option>
+                        <option value="600">Premium (600sqft per gallon)</option>
+                        <option value="500">Standard (500sqft per gallon)</option>
+                        <option value="400">Cheap (400sqft per gallon)</option>
+                    </select>
+                </label>
         </main>
 
 
