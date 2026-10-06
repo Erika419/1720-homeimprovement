@@ -73,7 +73,7 @@ nav img{
 }
 
 nav a{
-    display: block;
+    display: inline-block;
     font-size: 0.7rem;
     font-weight: 400;
     color: #fff;
