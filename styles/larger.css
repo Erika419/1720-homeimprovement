@@ -11,8 +11,14 @@
 
        /**Navigation Stuff tag**/
     nav{
-        display: block;
         background-color: rgb(119, 197, 223);
+        position: static;
+    }
+
+    nav li{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
     }
 
     nav ul{
