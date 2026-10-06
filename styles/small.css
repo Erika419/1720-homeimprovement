@@ -36,7 +36,7 @@ header{
     display: grid;
     align-items: end;
     column-gap: 8px;
-    grid-template-columns: 24px auto 44px 44px;
+    grid-template-columns: 24px auto;
 }
 
 header img{
@@ -52,7 +52,10 @@ header span{
 
 /**navigation tag**/
 nav{ 
-    display: none;
+    background-color: #eee;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 nav ul{
@@ -60,6 +63,8 @@ nav ul{
     padding: 0;
     list-style-type: none;
     background-color: rgb(119, 197, 223);
+    display: flex;
+    justify-content: center;
 }
 
 nav a{
