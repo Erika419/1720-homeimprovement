@@ -1,14 +1,17 @@
 
 
     // Event listener for button click
-    document.getElementById('myForm').addEventListener('click', function () {
+    document.getElementById('myForm').addEventListener('click', function (event) {
 
       // Select all required inputs inside the form
       const requiredInputs = this.querySelectorAll("input[required]");
-      const values = {};
+      
 
     requiredInputs.forEach(input => {
-
+        // Stop form from submitting
+        event.preventDefault(); 
+        //reset each submit
+        const values = {};
         // Assigns input to the values object with the input's type as the key
         values[input.type] = input.value;
       console.log(`Value: ${values[input.type]}`);
