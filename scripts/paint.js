@@ -7,8 +7,8 @@
       const requiredInputs = this.querySelectorAll("input[required]");
       const values = {};
 
-      console.log("Required field values:", requiredInputs);
-      console.log("Required field values:", values);
+      alert("Required field values:", requiredInputs);
+      alert("Required field values:", values);
         });
     
     document.querySelector("#quality").selectedOptions[0]
