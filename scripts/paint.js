@@ -12,7 +12,7 @@
         const value = input.value.trim();
         // Assigns input to the values object with the input's name as the key
         values[input.name] = value;
-      alert("Required field values:", values);
+      console.log(`Input name: ${input.name}, Value: ${value}`);
     });
     });
     
