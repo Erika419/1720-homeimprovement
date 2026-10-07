@@ -16,9 +16,11 @@
         // Assigns input to the values object with the input's type as the key
         values[input.type] = input.value;
         // Check if the input value is a number
-        if (typeof input.value !== "number") {
-            console.log("The value of the input is not a number.");
-      }
+        if (!isNaN(values[input.type]) && values[input.type] !== "") {
+        console.log("It's a number");
+        } else {
+        console.log("Not a number");
+        }
     });
     });
     
