@@ -11,6 +11,8 @@
 
        /**Navigation Stuff tag**/
     nav{
+        max-width: none;
+        width: 100%;
         background-color: rgb(119, 197, 223);
         position: static;
     }
