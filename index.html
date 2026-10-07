@@ -70,7 +70,19 @@
         </nav>
 
                 <main>
-                <h1 id=mug>National Parks</h1>
+                <h1 id=mug>Supply Calculator</h1>
+                    
+                <form>
+                <label>Room Width
+                    <input type="number" name="width" required placeholder="Enter Room Width">
+                </label>
+                <label>Room Depth
+                    <input type="number" name="depth" required placeholder="Enter Room Depth">
+                </label>
+                <label>Wall Height
+                    <input type="number" name="height" required placeholder="Enter Wall Height">
+                </label>
+                    
                 <label>Paint Quality
                     <select id="quality">
                         <option value="none" disabled selected>Select an option</option>
@@ -79,6 +91,8 @@
                         <option value="400">Cheap (400sqft per gallon)</option>
                     </select>
                 </label>
+                <input type="submit">
+                </form>
         </main>
 
 
