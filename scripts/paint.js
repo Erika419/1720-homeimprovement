@@ -1,4 +1,5 @@
-
+   const button = document.getElementById('button');
+    const myList = document.getElementById('quality');
 
     // Event listener for button click
     document.getElementById('myForm').addEventListener('click', function (event) {
@@ -14,11 +15,9 @@
         const values = {};
         // Assigns input to the values object with the input's type as the key
         values[input.type] = input.value;
-        // Only log when all are filled
-        if (allFilled) {
-        console.clear(); // Optional: clears old logs
-        console.log("Final required field values:", values);
-        alert(JSON.stringify(values, null, 1));
+        // Check if the input value is a number
+        if (typeof input.value !== "number") {
+            console.log("The value of the input is not a number.");
       }
     });
     });
