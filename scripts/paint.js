@@ -8,11 +8,10 @@
       const values = {};
 
     requiredInputs.forEach(input => {
-        // Trim to avoid spaces-only values
-        const value = input.value.trim();
+
         // Assigns input to the values object with the input's name as the key
         values[input.name] = value;
-      console.log(`Input name: ${input.name}, Value: ${value}`);
+      console.log(`Value: ${value}`);
     });
     });
     
