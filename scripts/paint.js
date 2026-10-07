@@ -14,7 +14,12 @@
         const values = {};
         // Assigns input to the values object with the input's type as the key
         values[input.type] = input.value;
-      console.log(`Value: ${values[input.type]}`);
+        // Only log when all are filled
+        if (allFilled) {
+        console.clear(); // Optional: clears old logs
+        console.log("Final required field values:", values);
+        alert(JSON.stringify(values, null, 1));
+      }
     });
     });
     
