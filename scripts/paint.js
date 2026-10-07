@@ -2,13 +2,12 @@
     const myList = document.getElementById('quality');
 
     // Event listener for button click
-    button.addEventListener('click', () => {
-        function getValue() {
-            let inputValue = document.querySelector('#quality').value;
-            console.log(inputValue);
-            alert("You entered: " + inputValue);
-        }
-    });
+    document.getElementById('quality').addEventListener('click', function () {
+      const requiredInputs = document.querySelectorAll('#myForm [required]');
+      const values = {};
+      console.log("Required field values:", requiredInputs);
+      console.log("Required field values:", values);
+        });
     
     document.querySelector("#quality").selectedOptions[0]
 document.querySelector("#quality").selectedOptions[0].text
