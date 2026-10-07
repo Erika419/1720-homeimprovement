@@ -1,10 +1,12 @@
-    const button = document.getElementById('button');
-    const myList = document.getElementById('quality');
+
 
     // Event listener for button click
-    document.getElementById('quality').addEventListener('click', function () {
-      const requiredInputs = document.querySelectorAll('#myForm [required]');
+    document.getElementById('myForm').addEventListener('click', function () {
+
+      // Select all required inputs inside the form
+      const requiredInputs = this.querySelectorAll("input[required]");
       const values = {};
+
       console.log("Required field values:", requiredInputs);
       console.log("Required field values:", values);
         });
