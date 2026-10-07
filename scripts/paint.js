@@ -9,9 +9,9 @@
 
     requiredInputs.forEach(input => {
 
-        // Assigns input to the values object with the input's name as the key
-        values[input.name] = value;
-      console.log(`Value: ${value}`);
+        // Assigns input to the values object with the input's type as the key
+        values[input.type] = input.value;
+      console.log(`Value: ${values[input.type]}`);
     });
     });
     
