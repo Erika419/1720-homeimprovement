@@ -367,7 +367,7 @@ nav li.active a{
         border-left-color: var(--color-secondary);
     }
 
-    input[type="submit"]{
+    input[type="button"]{
         text-align: center;
         background-color: var(--color-secondary);
         color: var(--color-mygrey-0);

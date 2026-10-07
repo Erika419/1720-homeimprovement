@@ -3,9 +3,10 @@
 
     // Event listener for button click
     button.addEventListener('click', () => {
-        // Toggle visibility
-        if (document.querySelector("#button").style.display === 'none') {
-            document.querySelector("#quality").style.display = 'block';
+        function getValue() {
+            let inputValue = document.querySelector('#quality').value;
+            console.log(inputValue);
+            alert("You entered: " + inputValue);
         }
     });
     
