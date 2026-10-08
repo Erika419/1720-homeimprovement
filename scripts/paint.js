@@ -9,6 +9,8 @@
       
 
     requiredInputs.forEach(input => {
+        //convert input value to a number because javascript will always interpret it as a string.
+        let num = Number(input.value); 
         // Stop form from submitting
         event.preventDefault(); 
         //reset each submit
@@ -16,7 +18,7 @@
         // Assigns input to the values object with the input's type as the key
         values[input.type] = input.value;
         // Check if the input value is a number
-        if (!isNaN(values[input.type]) && values[input.type] !== "") {
+        if (!isNaN(num) && num !== "") {
         console.log("It's a number");
         } else {
         console.log("Not a number");
