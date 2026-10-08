@@ -1,6 +1,7 @@
    const button = document.getElementById('button');
     const myList = document.getElementById('quality');
     const form = document.getElementById('myForm');
+    const message = document.querySelector("#message");
 
 
     button.addEventListener('click', function (event) {
@@ -19,14 +20,15 @@
         }
     });
 
-    // Check the dropdown
+    // Check the dropdown and do a window pop-up if form is not complete
     if (myList.value === "none") {
         complete = false;
     }
     if (!complete) {
         alert("Please complete the form.");
     } else {
-        alert("Form is complete!");
+          message.innerHTML = "<li>This is the list that appears after the calculations have been done</li>"
+        
 
         // Convert the numbers after confirming they aren't empty
         const width = Number(document.querySelector('[name="width"]').value);
