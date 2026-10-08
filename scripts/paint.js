@@ -24,7 +24,7 @@
         complete = false;
     }
     if (!complete) {
-        console.log("Please complete the form.");
+        alert("Please complete the form.");
     } else {
         console.log("Form is complete!");
 
@@ -35,6 +35,8 @@
 
         // Get the dropdown value
         const quality = Number(myList.value);
+
+        //perform calculations
 
         console.log("Width:", width);
         console.log("Depth:", depth);
