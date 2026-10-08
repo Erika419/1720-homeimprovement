@@ -1,31 +1,50 @@
    const button = document.getElementById('button');
     const myList = document.getElementById('quality');
+    const form = document.getElementById('myForm');
 
-    // Event listener for button click
-    document.getElementById('button').addEventListener('click', function (event) {
 
-      // Select all required inputs inside the form
-      const requiredInputs = this.querySelectorAll("input[required]");
-      
+    button.addEventListener('click', function (event) {
 
+    //form from submitting
+    event.preventDefault();
+
+    // Gets user inputs
+    const requiredInputs = form.querySelectorAll("input[required]");
+
+    // Check if all required inputs are filled
+    let complete = true;
     requiredInputs.forEach(input => {
-        //convert input value to a number because javascript will always interpret it as a string.
-        let num = Number(input.value); 
-        // Stop form from submitting
-        event.preventDefault(); 
-        //reset each submit
-        const values = {};
-        // Assigns input to the values object with the input's type as the key
-        values[input.type] = input.value;
-        // Check if the input value is a number
-        if (!isNaN(num) && num !== "") {
-        console.log("It's a number");
-        } else {
-        console.log("Not a number");
+        if (input.value === "") {
+            complete = false;
         }
     });
-    });
-    
+
+    // Check the dropdown
+    if (myList.value === "none") {
+        complete = false;
+    }
+    if (!complete) {
+        console.log("Please complete the form.");
+    } else {
+        console.log("Form is complete!");
+
+        // Convert the numbers after confirming they aren't empty
+        const width = Number(document.querySelector('[name="width"]').value);
+        const depth = Number(document.querySelector('[name="depth"]').value);
+        const height = Number(document.querySelector('[name="height"]').value);
+
+        // Get the dropdown value
+        const quality = Number(myList.value);
+
+        console.log("Width:", width);
+        console.log("Depth:", depth);
+        console.log("Height:", height);
+        console.log("Paint quality:", quality);
+    }
+});
+
+
+
     document.querySelector("#quality").selectedOptions[0]
 document.querySelector("#quality").selectedOptions[0].text
 document.querySelector("#quality").selectedOptions[0].value
