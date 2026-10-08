@@ -2,7 +2,7 @@
     const myList = document.getElementById('quality');
 
     // Event listener for button click
-    document.getElementById('myForm').addEventListener('click', function (event) {
+    document.getElementById('button').addEventListener('click', function (event) {
 
       // Select all required inputs inside the form
       const requiredInputs = this.querySelectorAll("input[required]");
