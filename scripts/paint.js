@@ -2,6 +2,9 @@
     const myList = document.getElementById('quality');
     const form = document.getElementById('myForm');
     const message = document.querySelector("#message");
+    const height = document.getElementById('height');
+    const width = document.getElementById('width');
+    const depth = document.getElementById('depth');
 
 
     button.addEventListener('click', function (event) {
@@ -27,7 +30,17 @@
     if (!complete) {
         alert("Please complete the form.");
     } else {
-          message.innerHTML = "<li>This is the list that appears after the calculations have been done</li>"
+        //calculates the square feet of carpet and the amount of tack strip
+        function carpet(area, strip, squareYards){
+            strip = Number(document.getElementById('width').value *2) + Number(document.getElementById('depth').value *2);
+            area = Number(document.getElementById('width').value) * Number(document.getElementById('depth').value);
+            squareYards = Math.ceil(area/9);
+             message.innerHTML = `
+             <li>You need ${squareYards} square yards of carpet.</li>
+             <li>You need ${strip} square feet of tack strip.</li>`
+        }
+         
+        console.log(carpet());
         
 
         // Convert the numbers after confirming they aren't empty
@@ -38,12 +51,8 @@
         // Get the dropdown value
         const quality = Number(myList.value);
 
-        //perform calculations
+       
 
-        console.log("Width:", width);
-        console.log("Depth:", depth);
-        console.log("Height:", height);
-        console.log("Paint quality:", quality);
     }
 });
 
