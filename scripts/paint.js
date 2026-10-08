@@ -40,7 +40,7 @@
              <li>You need ${strip} square feet of tack strip.</li>`
         }
          
-        console.log(carpet());
+        
         
 
         // Convert the numbers after confirming they aren't empty
