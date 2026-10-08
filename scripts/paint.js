@@ -26,7 +26,7 @@
     if (!complete) {
         alert("Please complete the form.");
     } else {
-        console.log("Form is complete!");
+        alert("Form is complete!");
 
         // Convert the numbers after confirming they aren't empty
         const width = Number(document.querySelector('[name="width"]').value);
