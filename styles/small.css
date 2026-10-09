@@ -384,6 +384,12 @@ nav li.active a{
     }
 }
 
+/**List Stylizatin Layout tag**/
+    #listStyle{
+        list-style-type: square;
+        padding-bottom: 1rem;
+    }
+
 
 /**footer tag**/
     footer{

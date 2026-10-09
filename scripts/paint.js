@@ -42,9 +42,12 @@
                 const primer = Math.ceil((ceilingArea + wallArea) / quality);
 
                 return `
+                <ul id="listStyle">
+                <h2>Paint Supplies</h2>
                 <li>You need ${flatPaint} gallons of flat paint.</li>
                 <li>You need ${semiGloss} gallons of semi-gloss paint.</li>
-                <li>You need ${primer} gallons of primer.</li>`;         
+                <li>You need ${primer} gallons of primer.</li>   
+                </ul>`
             }
 
     //calculates the square feet of carpet and the amount of tack strip
@@ -56,8 +59,11 @@
             //converts from square feet to square yards and rounds up to the nearest whole number
             const squareYards = Math.ceil(area/9);
              return `
+             <ul id="listStyle">
+             <h2>Carpet Supplies</h2>
              <li>You need ${squareYards} square yards of carpet.</li>
-             <li>You need ${strip} square feet of tack strip.</li>`
+             <li>You need ${strip} square feet of tack strip.</li>
+             </ul>`
         }
 
     // Check the dropdown and do a window pop-up if form is not complete
