@@ -386,7 +386,7 @@ nav li.active a{
 
 /**List Stylizatin Layout tag**/
     #listStyle{
-        list-style-type: square;
+        list-style-type: url('images/checkbox.webp'); 
         padding-bottom: 1rem;
     }
 

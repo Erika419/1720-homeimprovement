@@ -43,7 +43,7 @@
 
                 return `
                 <ul id="listStyle">
-                <h2>Paint Supplies</h2>
+                <h3>Paint Supplies</h3>
                 <li>You need ${flatPaint} gallons of flat paint.</li>
                 <li>You need ${semiGloss} gallons of semi-gloss paint.</li>
                 <li>You need ${primer} gallons of primer.</li>   
@@ -60,7 +60,7 @@
             const squareYards = Math.ceil(area/9);
              return `
              <ul id="listStyle">
-             <h2>Carpet Supplies</h2>
+             <h3>Carpet Supplies</h3>
              <li>You need ${squareYards} square yards of carpet.</li>
              <li>You need ${strip} square feet of tack strip.</li>
              </ul>`
