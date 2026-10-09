@@ -38,11 +38,6 @@
     // if it is complete, then it will calculate the square feet/yards of paint or carpet
     } else {
 
-        //gets user input using the name attribute and converts it to a number
-        const width = Number(document.querySelector('[name="width"]').value);
-        const depth = Number(document.querySelector('[name="depth"]').value);
-        const height = Number(document.querySelector('[name="height"]').value);
-
          //calculates the square feet of paint 
          function paint(area, walls){
             // amount of flatPaint needed is for the ceiling (area)
@@ -62,6 +57,12 @@
 
         //calculates the square feet of carpet and the amount of tack strip
         function carpet(){
+
+        //gets user input using the name attribute and converts it to a number
+        const width = Number(document.querySelector('[name="width"]').value);
+        const depth = Number(document.querySelector('[name="depth"]').value);
+        const height = Number(document.querySelector('[name="height"]').value);
+
             const strip = Number(document.getElementById('width').value *2) + Number(document.getElementById('depth').value *2);
             const area = Number(document.getElementById('width').value) * Number(document.getElementById('depth').value);
             const squareYards = Math.ceil(area/9);
