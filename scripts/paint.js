@@ -10,9 +10,7 @@
     button.addEventListener('click', function (event) {
 
     // Convert the input numbers after confirming they aren't empty
-    const width = Number(document.querySelector('[name="width"]').value);
-    const depth = Number(document.querySelector('[name="depth"]').value);
-    const height = Number(document.querySelector('[name="height"]').value);
+
 
     // Get the dropdown value
     const quality = Number(myList.value);
@@ -39,6 +37,11 @@
         alert("Please complete the form.");
     // if it is complete, then it will calculate the square feet/yards of paint or carpet
     } else {
+
+        //gets user input using the name attribute and converts it to a number
+        const width = Number(document.querySelector('[name="width"]').value);
+        const depth = Number(document.querySelector('[name="depth"]').value);
+        const height = Number(document.querySelector('[name="height"]').value);
 
          //calculates the square feet of paint 
          function paint(area, walls){
