@@ -8,10 +8,6 @@
 
 
     button.addEventListener('click', function (event) {
-
-    // Convert the input numbers after confirming they aren't empty
-
-
     // Get the dropdown value
     const quality = Number(myList.value);
 
@@ -44,7 +40,7 @@
                 const semiGloss = Math.ceil(wallArea / quality);
                 const primer = Math.ceil((ceilingArea + wallArea) / quality);
 
-                message.innerHTML = `
+                message.innerHTML += `
                 <li>You need ${flatPaint} gallons of flat paint.</li>
                 <li>You need ${semiGloss} gallons of semi-gloss paint.</li>
                 <li>You need ${primer} gallons of primer.</li>`;         
@@ -58,10 +54,13 @@
             const area = Number(document.getElementById('width').value) * Number(document.getElementById('depth').value);
             //converts from square feet to square yards and rounds up to the nearest whole number
             const squareYards = Math.ceil(area/9);
-             message.innerHTML = `
+             message.innerHTML += `
              <li>You need ${squareYards} square yards of carpet.</li>
              <li>You need ${strip} square feet of tack strip.</li>`
         }
+
+        //prevents the form from submitting and refreshing the page
+        message.innerHTML.preventDefault();
 
     // Check the dropdown and do a window pop-up if form is not complete
     if (myList.value === "none") {
@@ -71,8 +70,11 @@
         alert("Please complete the form.");
     // if it is complete, then it will calculate the square feet/yards of paint or carpet
     } else {
+        //Add the carpet calculations underneath the paint results.
+        message.innerHTML = '';
         paint();
         carpet();
+        message.innerHTML = '';
 
     } 
 
