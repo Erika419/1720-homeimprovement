@@ -74,7 +74,6 @@
         message.innerHTML = '';
         paint();
         carpet();
-        message.innerHTML = '';
 
     } 
 
