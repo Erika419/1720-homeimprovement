@@ -29,6 +29,40 @@
         }
     });
 
+     //calculates the square feet of paint 
+            function paint() {
+                //gets user input using the name attribute and converts it to a number
+                const roomWidth = Number(document.querySelector('[name="width"]').value);
+                const roomDepth = Number(document.querySelector('[name="depth"]').value);
+                const wallHeight = Number(document.querySelector('[name="height"]').value);
+                //calculates the area of the ceiling
+                const ceilingArea = roomWidth * roomDepth;
+                //calculates the area of all four walls
+                const wallArea = 2 * (roomWidth * wallHeight) + 2 * (roomDepth * wallHeight);
+                //calculates the gallons of paint required for each paint type based on the paint quality
+                const flatPaint = Math.ceil(ceilingArea / quality);
+                const semiGloss = Math.ceil(wallArea / quality);
+                const primer = Math.ceil((ceilingArea + wallArea) / quality);
+
+                message.innerHTML = `
+                <li>You need ${flatPaint} gallons of flat paint.</li>
+                <li>You need ${semiGloss} gallons of semi-gloss paint.</li>
+                <li>You need ${primer} gallons of primer.</li>`;         
+            }
+
+    //calculates the square feet of carpet and the amount of tack strip
+        function carpet(){
+            //calculates perimeter of the room to determine how much tack strip is needed
+            const strip = Number(document.getElementById('width').value *2) + Number(document.getElementById('depth').value *2);
+            //calculates the area of the room to determine how much carpet is needed
+            const area = Number(document.getElementById('width').value) * Number(document.getElementById('depth').value);
+            //converts from square feet to square yards and rounds up to the nearest whole number
+            const squareYards = Math.ceil(area/9);
+             message.innerHTML = `
+             <li>You need ${squareYards} square yards of carpet.</li>
+             <li>You need ${strip} square feet of tack strip.</li>`
+        }
+
     // Check the dropdown and do a window pop-up if form is not complete
     if (myList.value === "none") {
         complete = false;
@@ -37,52 +71,12 @@
         alert("Please complete the form.");
     // if it is complete, then it will calculate the square feet/yards of paint or carpet
     } else {
+        paint();
+        carpet();
 
-         //calculates the square feet of paint 
-         function paint(area, walls){
-            // amount of flatPaint needed is for the ceiling (area)
-            area = Number(document.getElementById('width').value) * Number(document.getElementById('depth').value);
-            const flatPaint = Math.ceil(area/quality);
-            //semi-gloss is only for the walls (area*4)
-            walls = area * 4;
-            const semiGloss = Math.ceil(walls/quality);
-            //amount of primer needed is for the walls and ceiling (area*4)+(area)
-            const primer =  Math.ceil((walls + area) / quality)
-             message.innerHTML = `
-             <li>You need ${flatPaint} gallons of flat paint.</li>
-             <li>You need ${semiGloss} gallons of semi-gloss paint.</li>
-             <li>You need ${primer} gallons of primer.</li>`
-            
-         }
-
-        //calculates the square feet of carpet and the amount of tack strip
-        function carpet(){
-
-        //gets user input using the name attribute and converts it to a number
-        const width = Number(document.querySelector('[name="width"]').value);
-        const depth = Number(document.querySelector('[name="depth"]').value);
-        const height = Number(document.querySelector('[name="height"]').value);
-
-            const strip = Number(document.getElementById('width').value *2) + Number(document.getElementById('depth').value *2);
-            const area = Number(document.getElementById('width').value) * Number(document.getElementById('depth').value);
-            const squareYards = Math.ceil(area/9);
-             message.innerHTML = `
-             <li>You need ${squareYards} square yards of carpet.</li>
-             <li>You need ${strip} square feet of tack strip.</li>`
-        }
-    }
-         
-        
-        
-
-
-
-       
+    } 
 
     });
 
 
 
-    document.querySelector("#quality").selectedOptions[0]
-document.querySelector("#quality").selectedOptions[0].text
-document.querySelector("#quality").selectedOptions[0].value
