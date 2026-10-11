@@ -42,8 +42,8 @@
                 const primer = Math.ceil((ceilingArea + wallArea) / quality);
 
                 return `
-                <ul id="listStyle">
                 <h3>Paint Supplies</h3>
+                <ul id="listStyle">
                 <li>You need ${flatPaint} gallons of flat paint.</li>
                 <li>You need ${semiGloss} gallons of semi-gloss paint.</li>
                 <li>You need ${primer} gallons of primer.</li>   
@@ -59,8 +59,8 @@
             //converts from square feet to square yards and rounds up to the nearest whole number
             const squareYards = Math.ceil(area/9);
              return `
-             <ul id="listStyle">
              <h3>Carpet Supplies</h3>
+             <ul id="listStyle">
              <li>You need ${squareYards} square yards of carpet.</li>
              <li>You need ${strip} square feet of tack strip.</li>
              </ul>`
