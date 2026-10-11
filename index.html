@@ -35,8 +35,6 @@
     
     <script src="scripts/year.js" defer> </script>
      <script src="scripts/scripts.js" defer> </script>
-     <script src="scripts/dark.js" defer> </script>
-     <script src="scripts/parks.js" type="module"> </script>
      <script src="scripts/paint.js" defer> </script>
     
 </head>
@@ -50,19 +48,19 @@
             <ul>
                 <li>
                     <a href="index.html">
-                        <img class="active" src="images/nav-calculator.svg" alt="calculator">
+                        <img class="active" id="calculator" src="images/nav-calculator.svg" alt="calculator">
                         <div>calculator</div>
                     </a>
-                    <a href="#">
-                        <img src="images/nav-paint.svg" alt="paint">
+                    <a href="index.html">
+                        <img id="paintSupplies" src="images/nav-paint.svg" alt="paint">
                         <div>Find Colors</div>
                     </a>
-                    <a href="#">
-                        <img src="images/nav-paintroller.svg" alt="paintroller">
+                    <a href="index.html">
+                        <img id="buttonSupplies" src="images/nav-paintroller.svg" alt="paintroller">
                         <div>Supplies</div>
                     </a>
-                    <a href="#">
-                        <img src="images/nav-pros.svg" alt="For Pros">
+                    <a href="index.html">
+                        <img id="myForm"src="images/nav-pros.svg" alt="For Pros">
                         <div>For Pros</div>
                     </a>
                 </li>
@@ -73,11 +71,11 @@
 
                 <div class="hero">
                 <img src="images/heroimage.webp" alt="hero image" width="1200" height="850" load="lazy">
-                <h1 id=mug>Supply Calculator</h1>    
+                <h1 id="calculator">Supply Calculator</h1>    
                 </div>
                     
-                <form id="myForm">
-                <label>Room Width
+                <form>
+                <label id="myForm">Room Width
                     <input type="number" id="width" name="width" required placeholder="Enter Room Width">
                 </label>
                 <label>Room Depth
@@ -88,14 +86,16 @@
                 </label>
                     
                 <label>Paint Quality
-                    <select id="quality">
+                    <select id="paintSupplies">
                         <option value="none" disabled selected>Select an option</option>
                         <option value="600">Premium (600sqft per gallon)</option>
                         <option value="500">Standard (500sqft per gallon)</option>
                         <option value="400">Cheap (400sqft per gallon)</option>
                     </select>
                 </label>
+                <div butonSupplies>
                 <button type="button" id="button">Click Me!</button>
+                </div>
 
                 <ul id="message"></ul>
                 </form>
