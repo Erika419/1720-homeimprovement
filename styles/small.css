@@ -368,6 +368,8 @@ nav li.active a{
     }
 
     #button{
+        display: flex;
+        justify-content: center;
         text-align: center;
         background-color: var(--color-secondary);
         color: var(--color-mygrey-0);
