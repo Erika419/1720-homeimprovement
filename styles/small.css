@@ -389,6 +389,7 @@ nav li.active a{
         list-style-type: square;
         list-style-image: url('../images/checkbox.webp'); 
         padding-bottom: 1rem;
+        line-height: 1.5;
     }
 
 
