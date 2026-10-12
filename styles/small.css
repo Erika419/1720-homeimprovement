@@ -101,7 +101,7 @@ nav.show{
 }
 
 nav li.active a{
-    background-color: var(--color-primary);
+    background-color: var(--color-mygrey-30);
     color: #eee;
 }
 
