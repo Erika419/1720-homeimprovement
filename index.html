@@ -59,7 +59,7 @@
                         <img src="images/nav-paintroller.svg" alt="paintroller">
                         <div>Supplies</div>
                     </a>
-                    <a href="#myForm">
+                    <a href="#userInput">
                         <img src="images/nav-pros.svg" alt="For Pros">
                         <div>For Pros</div>
                     </a>
@@ -74,8 +74,8 @@
                 <h1>Supply Calculator</h1>    
                 </div>
                     
-                <form>
-                <div id="myForm">
+                <form id="myForm">
+                <div id="userInput">
                 <label>Room Width
                     <input type="number" id="width" name="width" required placeholder="Enter Room Width">
                 </label>
@@ -89,7 +89,7 @@
                     
                 <label>Paint Quality
                     <div id="paintSupplies">
-                    <select>
+                    <select id="quality">
                         <option value="none" disabled selected>Select an option</option>
                         <option value="600">Premium (600sqft per gallon)</option>
                         <option value="500">Standard (500sqft per gallon)</option>
