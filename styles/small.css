@@ -102,7 +102,7 @@ nav.show{
 
 .active{
     background-color: var(--color-mygrey-30);
-    color: #eee;
+    color: #2c2c2c;
 }
 
 /**main stuff tag**/
